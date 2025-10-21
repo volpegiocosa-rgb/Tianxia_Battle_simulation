@@ -111,6 +111,7 @@ subroutine simula(sims, marcia, spade)
     write(30,9) dble(reg_forza) / dble(sum(reg_forza)) * 100.d0
     !
     deallocate(battle)
+    deallocate(attacco)
     
 9   FORMAT(100F10.2)    
 10  FORMAT(10F10.2) 
@@ -129,7 +130,7 @@ subroutine shuffle16(arr)
         arr(i) = i
     end do
 
-    ! Algoritmo di Fisher–Yates shuffle
+    ! Algoritmo di Fisherâ€“Yates shuffle
     do i = 16, 2, -1
         call random_number(r)
         j = int(r * i) + 1
