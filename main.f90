@@ -90,7 +90,7 @@ subroutine simula(sims, marcia, spade)
                         if (forza(k).gt.attacco(j,k)) then
                             attacco(j,k) =  forza(k)
                         end if
-                        forza = forza0(r+1)
+                        forza(k) = forza0(r+1)
                     end if
                 end do
             end do
